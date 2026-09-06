@@ -1627,4 +1627,37 @@ body.english .fa-text {
 body.english .en-text {
     display: revert !important;
 }
+/* ===== FIX ALL PORTFOLIO IMAGES ===== */
 
+.portfolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+}
+
+.portfolio-grid .portfolio-item,
+.portfolio-grid .portfolio-item.large {
+    width: 100% !important;
+    height: 500px !important;
+    overflow: hidden !important;
+}
+
+.portfolio-grid .portfolio-item img,
+.portfolio-grid .portfolio-item.large img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .portfolio-grid .portfolio-item,
+    .portfolio-grid .portfolio-item.large {
+        height: 450px !important;
+    }
+}
