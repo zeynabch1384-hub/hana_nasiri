@@ -1610,3 +1610,20 @@ button {
     }
 
 }
+/* ================= LANGUAGE SWITCH ================= */
+
+.fa-text {
+    display: revert;
+}
+
+.en-text {
+    display: none;
+}
+
+body.english .fa-text {
+    display: none !important;
+}
+
+body.english .en-text {
+    display: revert !important;
+}
